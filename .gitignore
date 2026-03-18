@@ -1,0 +1,23 @@
+# Windows thumbnail databases
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Windows folder settings
+desktop.ini
+
+# Recycle Bin used on shared drives
+$RECYCLE.BIN/
+
+# VS Code specific files
+.vscode/
+*.code-workspace
+
+# Search indexing files
+[Dd]ebug/
+[Rr]elease/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

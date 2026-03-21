@@ -4,6 +4,7 @@
     <title vid="4">Sugar n' Spice Creations By Tilda</title>
     <script src="https://cdn.tailwindcss.com/3.4.17" vid="5"></script>
     <script src="https://unpkg.com/@phosphor-icons/web" vid="6"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" vid="7">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" vid="8">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Shrikhand&amp;display=swap" rel="stylesheet" vid="9">
@@ -34,202 +35,147 @@
             }
         }
     </script>
-    <style vid="11">
-        body {
-            font-family: 'Outfit', sans-serif;
-            color: #3B5540;
-            background-color: #FEF0F3;
-        }
-        
-        .bg-pattern {
-            background-color: #FEF0F3;
-            background-image: linear-gradient(90deg, rgba(255, 214, 224, 0.4) 50%, transparent 50%),
-                              linear-gradient(rgba(255, 214, 224, 0.4) 50%, transparent 50%);
-            background-size: 60px 60px;
-        }
-
-        
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #FEF0F3; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #8CB092; 
-            border-radius: 5px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #5C8061; 
-        }
-
-        
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
-        
-        .sparkle-icon {
-            animation: twinkle 2s infinite ease-in-out alternate;
-        }
-        @keyframes twinkle {
-            0% { transform: scale(0.8); opacity: 0.5; }
-            100% { transform: scale(1.1); opacity: 1; }
-        }
-        
-        
-        .modal-enter {
-            opacity: 0;
-            transform: scale(0.95) translateY(10px);
-            transition: all 0.3s ease-out;
-        }
-        .modal-enter-active {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-        }
-    </style>
+    <link rel="stylesheet" href="sns.css">
 </head>
 <body class="w-full h-full min-h-screen relative overflow-x-hidden selection:bg-brand-green-light selection:text-white" vid="12">
 
     
     <nav class="fixed w-full z-50 transition-all duration-300 bg-brand-pink/90 backdrop-blur-md border-b border-brand-pink-dark shadow-sm" id="navbar" vid="13">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" vid="14">
-            <div class="flex justify-between items-center h-20" vid="15">
-                
-              <a href="#" class="flex items-center gap-2 group">
-                <img src="C:\Users\ELITEBOOK\Documents\Sugar n' Spice\Pictures\logos\2.png" 
-                    alt="Sugar n' Spice Logo"
-                    class="h-12 w-auto">
+            <div class="flex justify-between items-center h-20 gap-4" vid="15">
+                <a href="#" class="flex items-center gap-2 group min-w-0">
+                    <img src="./assets/logos/2.png" alt="Sugar n' Spice Logo" class="h-10 sm:h-12 w-auto shrink-0">
+                    <div class="flex flex-col leading-none min-w-0">
+                        <span class="font-groovy text-brand-pink-text text-lg sm:text-xl tracking-wide truncate">
+                            Sugar n' Spice
+                        </span>
+                        <span class="font-body text-brand-green text-[10px] sm:text-xs font-semibold tracking-widest uppercase truncate">
+                            Creations By Tilda
+                        </span>
+                    </div>
+                </a>
 
-    <div class="flex flex-col leading-none">
-        <span class="font-groovy text-brand-pink-text text-xl tracking-wide">
-            Sugar n' Spice
-        </span>
-        <span class="font-body text-brand-green text-xs font-semibold tracking-widest uppercase">
-            Creations By Tilda
-        </span>
-    </div>
-</a>
-                
-               <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="#shop"
+                       class="relative text-brand-green font-medium hover:text-brand-pink-text transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-brand-pink-text after:transition-all after:duration-300 hover:after:w-full">
+                        Shop
+                    </a>
+                    <a href="#how-to-order"
+                       class="relative text-brand-green font-medium hover:text-brand-pink-text transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-brand-pink-text after:transition-all after:duration-300 hover:after:w-full">
+                        How to Order
+                    </a>
+                    <a href="#care-tips"
+                       class="relative text-brand-green font-medium hover:text-brand-pink-text transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-brand-pink-text after:transition-all after:duration-300 hover:after:w-full">
+                        Care Tips
+                    </a>
+                    <a href="#faq"
+                       class="relative text-brand-green font-medium hover:text-brand-pink-text transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-brand-pink-text after:transition-all after:duration-300 hover:after:w-full">
+                        FAQ
+                    </a>
+                    <a href="https://wa.me/254113762991?text=Hi%20Sugar%20n%27%20Spice%20Creations%20By%20Tilda!%20I%20want%20to%20place%20an%20order."
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="bg-brand-green text-brand-pink px-6 py-2.5 rounded-full font-semibold hover:bg-brand-green-dark transition-colors shadow-md hover:shadow-lg flex items-center gap-2">
+                        <i class="ph-bold ph-paper-plane-tilt"></i>
+                        DM to Order
+                    </a>
+                </div>
 
-    <a href="#shop"
-       class="relative text-brand-green font-medium
-              hover:text-brand-pink-text transition-colors
-              after:content-[''] after:absolute after:left-0 after:-bottom-1
-              after:h-[2px] after:w-0 after:bg-brand-pink-text
-              after:transition-all after:duration-300
-              hover:after:w-full">
-        Shop
-    </a>
-
-    <a href="#how-to-order"
-       class="relative text-brand-green font-medium
-              hover:text-brand-pink-text transition-colors
-              after:content-[''] after:absolute after:left-0 after:-bottom-1
-              after:h-[2px] after:w-0 after:bg-brand-pink-text
-              after:transition-all after:duration-300
-              hover:after:w-full">
-        How to Order
-    </a>
-
-    <a href="#care-tips"
-       class="relative text-brand-green font-medium
-              hover:text-brand-pink-text transition-colors
-              after:content-[''] after:absolute after:left-0 after:-bottom-1
-              after:h-[2px] after:w-0 after:bg-brand-pink-text
-              after:transition-all after:duration-300
-              hover:after:w-full">
-        Care Tips
-    </a>
-
-    <a href="#faq"
-       class="relative text-brand-green font-medium
-              hover:text-brand-pink-text transition-colors
-              after:content-[''] after:absolute after:left-0 after:-bottom-1
-              after:h-[2px] after:w-0 after:bg-brand-pink-text
-              after:transition-all after:duration-300
-              hover:after:w-full">
-        FAQ
-    </a>
-
-    <a href="#custom"
-       class="bg-brand-green text-brand-pink px-6 py-2.5 rounded-full font-semibold
-              hover:bg-brand-green-dark transition-colors shadow-md hover:shadow-lg
-              flex items-center gap-2">
-        <i class="ph-bold ph-paper-plane-tilt"></i>
-        DM to Order
-    </a>
-
-</div>
-
-                
                 <div class="md:hidden flex items-center" vid="30">
-                    <button id="mobile-menu-btn" class="text-brand-green hover:text-brand-pink-text focus:outline-none" vid="31">
-                        <i class="ph ph-list text-3xl" vid="32"></i>
+                    <button id="mobile-menu-btn" class="text-brand-green hover:text-brand-pink-text focus:outline-none" aria-label="Toggle mobile menu" aria-controls="mobile-menu" aria-expanded="false" vid="31">
+                        <i id="mobile-menu-icon" class="ph ph-list text-3xl" vid="32"></i>
                     </button>
                 </div>
             </div>
+
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="rounded-2xl border border-brand-pink-dark bg-white/95 backdrop-blur-sm shadow-lg px-4 py-3">
+                    <div class="flex flex-col gap-1">
+                        <a href="#shop" class="mobile-menu-link px-3 py-2.5 rounded-xl font-medium text-brand-green hover:bg-brand-pink/70 transition-colors">Shop</a>
+                        <a href="#how-to-order" class="mobile-menu-link px-3 py-2.5 rounded-xl font-medium text-brand-green hover:bg-brand-pink/70 transition-colors">How to Order</a>
+                        <a href="#care-tips" class="mobile-menu-link px-3 py-2.5 rounded-xl font-medium text-brand-green hover:bg-brand-pink/70 transition-colors">Care Tips</a>
+                        <a href="#faq" class="mobile-menu-link px-3 py-2.5 rounded-xl font-medium text-brand-green hover:bg-brand-pink/70 transition-colors">FAQ</a>
+                        <a href="https://wa.me/254113762991?text=Hi%20Sugar%20n%27%20Spice%20Creations%20By%20Tilda!%20I%20want%20to%20place%20an%20order."
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="mobile-menu-link mt-1 bg-brand-green text-brand-pink px-4 py-3 rounded-xl font-semibold hover:bg-brand-green-dark transition-colors flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-paper-plane-tilt"></i>
+                            DM to Order
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        
-    <a href="#" class="flex items-center gap-2 group relative">
-    
-
     </nav>
 
     
-<section class="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-pattern">
+<section class="relative pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-pattern">
 
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-12 lg:gap-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 sm:gap-12 lg:gap-14">
 
-            <div class="relative flex justify-center w-full order-2 md:order-1">
+            <div class="order-2 md:order-1" style="display: flex; justify-content: center; width: 100%;">
 
-                <div class="relative w-full max-w-[420px] aspect-square bg-white/40 rounded-3xl shadow-2xl backdrop-blur-xl border border-white p-6 rotate-3 hover:rotate-0 transition-all duration-500 group">
-
-                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-pink-dark/30 to-brand-green-light/30 rounded-3xl"></div>
-
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-1/2 bg-gradient-to-br from-brand-pink-dark to-brand-pink rounded-full shadow-inner border-4 border-white/50 overflow-hidden">
-                        <div class="absolute inset-0 opacity-40 bg-[radial-gradient(circle,_#ffffff_1px,_transparent_1px)]" style="background-size:10px 10px"></div>
+                <div id="carousel" style="position: relative; width: 100%; max-width: 420px; aspect-ratio: 1; overflow: hidden !important; border-radius: 1.5rem; padding: clamp(0.75rem, 3vw, 1.5rem); box-sizing: border-box; background: rgba(255,255,255,0.4); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); backdrop-filter: blur(16px); border: 1px solid white;">
+                    <div id="carousel-viewport" style="width: 100%; height: 100%; overflow: hidden; border-radius: 1rem;">
+                        <div id="carousel-track" style="display: flex; width: 100%; height: 100%; transition: transform 0.4s ease-in-out;">
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/rollingtray/batman.jpg" alt="Batman" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/rollingtray/beebop.jpg" alt="Beebop" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/ashtrays/hellokitty.jpg" alt="Hello Kitty" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/ashtrays/jojo.jpg" alt="Jojo" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/ashtrays/powerpuff.jpg" alt="Powerpuff" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/rollingtray/toxic.jpg" alt="Toxic" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/ashtrays/wknd.jpg" alt="Weekend" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="absolute bottom-1/4 right-1/4 w-32 h-32 bg-gradient-to-tl from-brand-green to-brand-green-light rounded-lg border-2 border-white/30 shadow-[inset_0_-8px_16px_rgba(0,0,0,0.1),_0_10px_20px_rgba(0,0,0,0.1)] -rotate-12 flex items-center justify-center">
-                        <div class="w-16 h-16 rounded-full bg-brand-green-dark/20 shadow-inner"></div>
-                    </div>
-
-                    <i class="ph-fill ph-sparkle text-white text-3xl absolute top-10 right-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
-                    <i class="ph-fill ph-sparkle text-white text-2xl absolute bottom-1/3 left-1/4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"></i>
-
+                    <button id="carousel-prev" style="position: absolute; left: 0.5rem; top: 50%; transform: translateY(-50%); width: 2.5rem; height: 2.5rem; background: rgba(255,255,255,0.9); border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                        <i class="ph ph-caret-left" style="font-size: 1.25rem; color: #5C8061;"></i>
+                    </button>
+                    <button id="carousel-next" style="position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); width: 2.5rem; height: 2.5rem; background: rgba(255,255,255,0.9); border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                        <i class="ph ph-caret-right" style="font-size: 1.25rem; color: #5C8061;"></i>
+                    </button>
+                    <div id="carousel-dots" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem;"></div>
                 </div>
 
             </div>
 
             <div class="flex flex-col max-w-xl order-1 md:order-2 text-center md:text-left">
 
-    <h1 class="font-groovy text-5xl lg:text-7xl text-brand-green leading-tight mb-6">
+    <h1 class="font-groovy text-4xl sm:text-5xl lg:text-7xl text-brand-green leading-tight mb-6">
         Cute trays for <br>
         <span class="text-brand-pink-text">elevated </span>
         moments!
     </h1>
     
     
-    <p class="text-lg lg:text-xl text-brand-green-dark mb-8 font-medium">
+    <p class="text-base sm:text-lg lg:text-xl text-brand-green-dark mb-8 font-medium">
         Handcrafted, custom epoxy resin ashtrays, rolling trays, and accessories. 
     </p>
 
     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
 
         <a href="#shop"
-           class="bg-brand-pink-text text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b86273] transition-all shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2">
+           class="bg-brand-pink-text text-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#b86273] transition-all shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2">
             View Price List
             <i class="ph-bold ph-arrow-down"></i>
         </a>
 
         <a href="#how-to-order"
-           class="bg-white text-brand-green border-2 border-brand-green px-8 py-4 rounded-full font-bold text-lg hover:bg-brand-green hover:text-white transition-all shadow-md flex items-center justify-center gap-2">
+           class="bg-white text-brand-green border-2 border-brand-green px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-brand-green hover:text-white transition-all shadow-md flex items-center justify-center gap-2">
             How it Works
         </a>
 
@@ -468,7 +414,10 @@
                 </ul>
                 
                 <div class="mt-8 text-center" id="custom" vid="224">
-                    <a href="#" class="inline-flex items-center gap-3 bg-brand-green text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-brand-green-dark transition-all shadow-[0_10px_20px_rgba(92,128,97,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_25px_rgba(92,128,97,0.4)] relative overflow-hidden group" vid="225">
+                    <a href="https://wa.me/254113762991?text=Hi%20Sugar%20n%27%20Spice%20Creations%20By%20Tilda!%20I%20want%20to%20place%20an%20order."
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-3 bg-brand-green text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-brand-green-dark transition-all shadow-[0_10px_20px_rgba(92,128,97,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_25px_rgba(92,128,97,0.4)] relative overflow-hidden group" vid="225">
                         <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" vid="226"></div>
                         <i class="ph-bold ph-paper-plane-tilt relative z-10" vid="227"></i> 
                         <span class="relative z-10 font-groovy tracking-wider" vid="228">SEND US A DM</span>
@@ -842,69 +791,6 @@
     </div>
 
     
-    <script vid="427">
-        
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('shadow-md');
-                navbar.classList.replace('bg-brand-pink/90', 'bg-white/95');
-            } else {
-                navbar.classList.remove('shadow-md');
-                navbar.classList.replace('bg-white/95', 'bg-brand-pink/90');
-            }
-        });
-
-        
-        const modal = document.getElementById('portfolio-modal');
-        const modalTitle = document.getElementById('modal-title-text');
-        const modalWrapper = document.getElementById('modal-content-wrapper');
-
-        function openModal(categoryName) {
-            modalTitle.textContent = categoryName + " Designs";
-            modal.classList.remove('hidden');
-            
-            
-            modalWrapper.classList.remove('modal-enter-active');
-            void modalWrapper.offsetWidth; 
-            modalWrapper.classList.add('modal-enter-active');
-
-            
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            modalWrapper.classList.remove('modal-enter-active');
-            
-            
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
-            }, 300);
-        }
-
-        
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                closeModal();
-            }
-        });
-    </script>
+    <script src="snsscript.js"></script>
 
 </body></html>

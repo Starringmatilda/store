@@ -13,9 +13,6 @@ const navbar = document.getElementById('navbar');
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileMenuIcon = document.getElementById('mobile-menu-icon');
-const modal = document.getElementById('portfolio-modal');
-const modalTitle = document.getElementById('modal-title-text');
-const modalWrapper = document.getElementById('modal-content-wrapper');
 
 function syncCarouselLayout() {
     if (!carouselTrack || !carouselViewport || !totalSlides) {
@@ -178,41 +175,9 @@ if (navbar) {
     });
 }
 
-function openModal(categoryName) {
-    if (!modal || !modalTitle || !modalWrapper) {
-        return;
-    }
-
-    modalTitle.textContent = categoryName + " Designs";
-    modal.classList.remove('hidden');
-    
-    modalWrapper.classList.remove('modal-enter-active');
-    void modalWrapper.offsetWidth; 
-    modalWrapper.classList.add('modal-enter-active');
-
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-    if (!modal || !modalWrapper) {
-        return;
-    }
-
-    modalWrapper.classList.remove('modal-enter-active');
-    
-    setTimeout(() => {
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-    }, 300);
-}
-
 document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') {
         return;
-    }
-
-    if (modal && !modal.classList.contains('hidden')) {
-        closeModal();
     }
 
     if (mobileMenu && !mobileMenu.classList.contains('hidden')) {

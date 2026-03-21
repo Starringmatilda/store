@@ -1,0 +1,82 @@
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling Trays Gallery | Sugar n' Spice Creations</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-pink': '#FEF0F3',
+                        'brand-pink-dark': '#FFD6E0',
+                        'brand-pink-text': '#D17C8D',
+                        'brand-green': '#5C8061',
+                        'brand-green-light': '#8CB092',
+                        'brand-green-dark': '#3B5540',
+                        'brand-yellow': '#F9E29C'
+                    },
+                    fontFamily: {
+                        'groovy': ['Shrikhand', 'cursive'],
+                        'body': ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../sns.css">
+</head>
+<body class="w-full min-h-screen bg-brand-pink text-brand-green-dark overflow-x-hidden selection:bg-brand-green-light selection:text-white">
+    <nav class="sticky top-0 z-50 bg-brand-pink/95 backdrop-blur-md border-b border-brand-pink-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <a href="../index.html" class="flex items-center gap-2 min-w-0">
+                <img src="../assets/logos/2.png" alt="Sugar n' Spice Logo" class="h-10 sm:h-12 w-auto shrink-0">
+                <div class="leading-none min-w-0">
+                    <p class="font-groovy text-brand-pink-text text-lg sm:text-xl truncate">Sugar n' Spice</p>
+                    <p class="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-brand-green truncate">Creations By Tilda</p>
+                </div>
+            </a>
+            <a href="../index.html#shop" class="inline-flex items-center gap-2 bg-white text-brand-green border border-brand-green px-4 py-2 rounded-full font-semibold hover:bg-brand-green hover:text-white transition-colors">
+                <i class="ph-bold ph-arrow-left"></i>
+                Back to Categories
+            </a>
+        </div>
+    </nav>
+
+    <main class="py-12 sm:py-16">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 sm:mb-14">
+                <h1 class="font-groovy text-4xl sm:text-5xl text-brand-green mb-3">Rolling Trays Gallery</h1>
+                <p class="text-brand-pink-text font-medium text-base sm:text-lg">Custom rolling tray designs in different vibes and finishes.</p>
+                <div class="w-24 h-1 bg-brand-yellow mx-auto mt-5 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <figure class="bg-white rounded-3xl p-3 shadow-sm border border-brand-pink-dark/70 overflow-hidden group">
+                    <img src="../assets/My ashtrays/rollingtray/batman.jpg" alt="Rolling Trays Gallery design 1" loading="lazy" class="w-full aspect-square object-cover rounded-2xl group-hover:scale-[1.02] transition-transform duration-300">
+                </figure>
+
+                <figure class="bg-white rounded-3xl p-3 shadow-sm border border-brand-pink-dark/70 overflow-hidden group">
+                    <img src="../assets/My ashtrays/rollingtray/batman_tray.jpg" alt="Rolling Trays Gallery design 2" loading="lazy" class="w-full aspect-square object-cover rounded-2xl group-hover:scale-[1.02] transition-transform duration-300">
+                </figure>
+
+                <figure class="bg-white rounded-3xl p-3 shadow-sm border border-brand-pink-dark/70 overflow-hidden group">
+                    <img src="../assets/My ashtrays/rollingtray/beebop.jpg" alt="Rolling Trays Gallery design 3" loading="lazy" class="w-full aspect-square object-cover rounded-2xl group-hover:scale-[1.02] transition-transform duration-300">
+                </figure>
+
+                <figure class="bg-white rounded-3xl p-3 shadow-sm border border-brand-pink-dark/70 overflow-hidden group">
+                    <img src="../assets/My ashtrays/rollingtray/beebop_2.jpg" alt="Rolling Trays Gallery design 4" loading="lazy" class="w-full aspect-square object-cover rounded-2xl group-hover:scale-[1.02] transition-transform duration-300">
+                </figure>
+
+                <figure class="bg-white rounded-3xl p-3 shadow-sm border border-brand-pink-dark/70 overflow-hidden group">
+                    <img src="../assets/My ashtrays/rollingtray/toxic.jpg" alt="Rolling Trays Gallery design 5" loading="lazy" class="w-full aspect-square object-cover rounded-2xl group-hover:scale-[1.02] transition-transform duration-300">
+                </figure>
+
+            </div>
+        </section>
+    </main>
+</body></html>

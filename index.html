@@ -1,0 +1,796 @@
+<html lang="en" class="scroll-smooth" vid="0"><head vid="1">
+    <meta charset="UTF-8" vid="2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" vid="3">
+    <title vid="4">Sugar n' Spice Creations By Tilda</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17" vid="5"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" vid="6"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" vid="7">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" vid="8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Shrikhand&amp;display=swap" rel="stylesheet" vid="9">
+    <script vid="10">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-pink': '#FEF0F3',
+                        'brand-pink-dark': '#FFD6E0',
+                        'brand-pink-text': '#D17C8D',
+                        'brand-green': '#5C8061',
+                        'brand-green-light': '#8CB092',
+                        'brand-green-dark': '#3B5540',
+                        'brand-yellow': '#F9E29C',
+                    },
+                    fontFamily: {
+                        'groovy': ['Shrikhand', 'cursive'],
+                        'body': ['Outfit', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gingham': 'linear-gradient(90deg, rgba(255, 214, 224, 0.25) 50%, transparent 50%), linear-gradient(rgba(255, 214, 224, 0.25) 50%, transparent 50%)',
+                    },
+                    backgroundSize: {
+                        'gingham-size': '40px 40px',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="sns.css">
+</head>
+<body class="w-full h-full min-h-screen relative overflow-x-hidden selection:bg-brand-green-light selection:text-white" vid="12">
+
+    
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-brand-pink/90 backdrop-blur-md border-b border-brand-pink-dark shadow-sm" id="navbar" vid="13">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" vid="14">
+            <div class="flex justify-between items-center h-20 gap-4" vid="15">
+                <a href="#" class="flex items-center gap-2 group min-w-0">
+                    <img src="./assets/logos/2.png" alt="Sugar n' Spice Logo" class="h-10 sm:h-12 w-auto shrink-0">
+                    <div class="flex flex-col leading-none min-w-0">
+                        <span class="font-groovy text-brand-pink-text text-lg sm:text-xl tracking-wide truncate">
+                            Sugar n' Spice
+                        </span>
+                        <span class="font-body text-brand-green text-[10px] sm:text-xs font-semibold tracking-widest uppercase truncate">
+                            Creations By Tilda
+                        </span>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="#shop"
+                       class="relative text-brand-green font-medium hover:text-brand-pink-text transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-brand-pink-text after:transition-all after:duration-300 hover:after:w-full">
+                        Shop
+                    </a>
+                    <a href="#how-to-order"
+                       class="relative text-brand-green font-medium hover:text-brand-pink-text transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-brand-pink-text after:transition-all after:duration-300 hover:after:w-full">
+                        How to Order
+                    </a>
+                    <a href="#care-tips"
+                       class="relative text-brand-green font-medium hover:text-brand-pink-text transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-brand-pink-text after:transition-all after:duration-300 hover:after:w-full">
+                        Care Tips
+                    </a>
+                    <a href="#faq"
+                       class="relative text-brand-green font-medium hover:text-brand-pink-text transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-brand-pink-text after:transition-all after:duration-300 hover:after:w-full">
+                        FAQ
+                    </a>
+                    <a href="https://wa.me/254113762991?text=Hi%20Sugar%20n%27%20Spice%20Creations%20By%20Tilda!%20I%20want%20to%20place%20an%20order."
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="bg-brand-green text-brand-pink px-6 py-2.5 rounded-full font-semibold hover:bg-brand-green-dark transition-colors shadow-md hover:shadow-lg flex items-center gap-2">
+                        <i class="ph-bold ph-paper-plane-tilt"></i>
+                        DM to Order
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center" vid="30">
+                    <button id="mobile-menu-btn" class="text-brand-green hover:text-brand-pink-text focus:outline-none" aria-label="Toggle mobile menu" aria-controls="mobile-menu" aria-expanded="false" vid="31">
+                        <i id="mobile-menu-icon" class="ph ph-list text-3xl" vid="32"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="rounded-2xl border border-brand-pink-dark bg-white/95 backdrop-blur-sm shadow-lg px-4 py-3">
+                    <div class="flex flex-col gap-1">
+                        <a href="#shop" class="mobile-menu-link px-3 py-2.5 rounded-xl font-medium text-brand-green hover:bg-brand-pink/70 transition-colors">Shop</a>
+                        <a href="#how-to-order" class="mobile-menu-link px-3 py-2.5 rounded-xl font-medium text-brand-green hover:bg-brand-pink/70 transition-colors">How to Order</a>
+                        <a href="#care-tips" class="mobile-menu-link px-3 py-2.5 rounded-xl font-medium text-brand-green hover:bg-brand-pink/70 transition-colors">Care Tips</a>
+                        <a href="#faq" class="mobile-menu-link px-3 py-2.5 rounded-xl font-medium text-brand-green hover:bg-brand-pink/70 transition-colors">FAQ</a>
+                        <a href="https://wa.me/254113762991?text=Hi%20Sugar%20n%27%20Spice%20Creations%20By%20Tilda!%20I%20want%20to%20place%20an%20order."
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="mobile-menu-link mt-1 bg-brand-green text-brand-pink px-4 py-3 rounded-xl font-semibold hover:bg-brand-green-dark transition-colors flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-paper-plane-tilt"></i>
+                            DM to Order
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+<section class="relative pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-44 lg:pb-28 overflow-hidden bg-pattern">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 sm:gap-12 lg:gap-14">
+
+            <div class="order-2 md:order-1" style="display: flex; justify-content: center; width: 100%;">
+
+                <div id="carousel" style="position: relative; width: 100%; max-width: 420px; aspect-ratio: 1; overflow: hidden !important; border-radius: 1.5rem; padding: clamp(0.75rem, 3vw, 1.5rem); box-sizing: border-box; background: rgba(255,255,255,0.4); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); backdrop-filter: blur(16px); border: 1px solid white;">
+                    <div id="carousel-viewport" style="width: 100%; height: 100%; overflow: hidden; border-radius: 1rem;">
+                        <div id="carousel-track" style="display: flex; width: 100%; height: 100%; transition: transform 0.4s ease-in-out;">
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/rollingtray/batman.jpg" alt="Batman" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/rollingtray/beebop.jpg" alt="Beebop" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/ashtrays/hellokitty.jpg" alt="Hello Kitty" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/ashtrays/jojo.jpg" alt="Jojo" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/ashtrays/powerpuff.jpg" alt="Powerpuff" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/rollingtray/toxic.jpg" alt="Toxic" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                            <div style="flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden;">
+                                <img src="assets/My ashtrays/ashtrays/wknd.jpg" alt="Weekend" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            </div>
+                        </div>
+                    </div>
+                    <button id="carousel-prev" style="position: absolute; left: 0.5rem; top: 50%; transform: translateY(-50%); width: 2.5rem; height: 2.5rem; background: rgba(255,255,255,0.9); border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                        <i class="ph ph-caret-left" style="font-size: 1.25rem; color: #5C8061;"></i>
+                    </button>
+                    <button id="carousel-next" style="position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); width: 2.5rem; height: 2.5rem; background: rgba(255,255,255,0.9); border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                        <i class="ph ph-caret-right" style="font-size: 1.25rem; color: #5C8061;"></i>
+                    </button>
+                    <div id="carousel-dots" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem;"></div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col max-w-xl order-1 md:order-2 text-center md:text-left">
+
+    <h1 class="font-groovy text-4xl sm:text-5xl lg:text-7xl text-brand-green leading-tight mb-6">
+        Cute trays for <br>
+        <span class="text-brand-pink-text">elevated </span>
+        moments!
+    </h1>
+    
+    
+    <p class="text-base sm:text-lg lg:text-xl text-brand-green-dark mb-8 font-medium">
+        Handcrafted, custom epoxy resin ashtrays, rolling trays, and accessories. 
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+
+        <a href="#shop"
+           class="bg-brand-pink-text text-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#b86273] transition-all shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2">
+            View Price List
+            <i class="ph-bold ph-arrow-down"></i>
+        </a>
+
+        <a href="#how-to-order"
+           class="bg-white text-brand-green border-2 border-brand-green px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-brand-green hover:text-white transition-all shadow-md flex items-center justify-center gap-2">
+            How it Works
+        </a>
+
+    </div>
+
+</div>
+        </div>
+    </div>
+</section>
+    <section id="shop" class="py-24 bg-white relative" vid="69">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" vid="70">
+            <div class="text-center mb-16" vid="71">
+                <h2 class="font-groovy text-5xl text-brand-green mb-4" vid="72">Price List</h2>
+                <p class="text-brand-pink-text font-medium text-lg" vid="73">All items are customizable with your preferred colors, glitter, and images.</p>
+                <div class="w-24 h-1 bg-brand-yellow mx-auto mt-6 rounded-full" vid="74"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" vid="75">
+                
+                
+                <div class="bg-brand-pink rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all border border-brand-pink-dark group flex flex-col h-full" vid="76">
+                    <div class="w-full aspect-square bg-white rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-[1.02] transition-transform" vid="77">
+                        <div class="absolute inset-0 bg-brand-pink-dark/20" vid="78"></div>
+                        <i class="ph-duotone ph-hexagon text-7xl text-brand-pink-text" vid="79"></i>
+                        <span class="absolute bottom-3 right-3 bg-white text-brand-green text-xs font-bold px-3 py-1 rounded-full shadow-sm" vid="80">6 Shapes</span>
+                    </div>
+                    <h3 class="font-groovy text-2xl text-brand-green mb-2" vid="81">Classic Ashtrays</h3>
+                    <ul class="text-sm text-brand-green-dark space-y-1 mb-6 flex-grow" vid="82">
+                        <li class="flex items-center gap-2" vid="83"><i class="ph-fill ph-caret-right text-brand-pink-text" vid="84"></i> Square</li>
+                        <li class="flex items-center gap-2" vid="85"><i class="ph-fill ph-caret-right text-brand-pink-text" vid="86"></i> Octagon 1</li>
+                        <li class="flex items-center gap-2" vid="87"><i class="ph-fill ph-caret-right text-brand-pink-text" vid="88"></i> Octagon 2</li>
+                        <li class="flex items-center gap-2" vid="89"><i class="ph-fill ph-caret-right text-brand-pink-text" vid="90"></i> Teardrop</li>
+                    </ul>
+                    <div class="flex items-end justify-between mt-auto pt-4 border-t border-brand-pink-dark border-dashed" vid="91">
+                        <div vid="92">
+                            <span class="block text-xs text-brand-green uppercase font-bold tracking-wider mb-1" vid="93">Price</span>
+                            <span class="text-2xl font-bold text-brand-pink-text" vid="94">800/=</span>
+                        </div>
+                        <button onclick="openModal('Classic Ashtrays')" class="w-12 h-12 bg-brand-green text-white rounded-full flex items-center justify-center hover:bg-brand-pink-text transition-colors shadow-md" vid="95">
+                            <i class="ph-bold ph-images text-xl" vid="96"></i>
+                        </button>
+                    </div>
+                </div>
+
+                
+                <div class="bg-brand-pink rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all border border-brand-pink-dark group flex flex-col h-full" vid="97">
+                    <div class="w-full aspect-square bg-white rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-[1.02] transition-transform" vid="98">
+                        <div class="absolute inset-0 bg-brand-green-light/10" vid="99"></div>
+                        <i class="ph-duotone ph-skull text-7xl text-brand-green-light" vid="100"></i>
+                    </div>
+                    <h3 class="font-groovy text-2xl text-brand-green mb-2" vid="101">Specialty Shapes</h3>
+                    <ul class="text-sm text-brand-green-dark space-y-1 mb-6 flex-grow" vid="102">
+                        <li class="flex items-center gap-2 justify-between" vid="103">
+                            <span class="flex items-center gap-2" vid="104"><i class="ph-fill ph-caret-right text-brand-pink-text" vid="105"></i> Skull</span>
+                            <span class="font-bold" vid="106">800/=</span>
+                        </li>
+                        <li class="flex items-center gap-2 justify-between" vid="107">
+                            <span class="flex items-center gap-2" vid="108"><i class="ph-fill ph-caret-right text-brand-pink-text" vid="109"></i> Small leaf</span>
+                            <span class="font-bold" vid="110">800/=</span>
+                        </li>
+                        <li class="flex items-center gap-2 justify-between text-brand-pink-text" vid="111">
+                            <span class="flex items-center gap-2" vid="112"><i class="ph-fill ph-caret-right text-brand-green" vid="113"></i> Large leaf</span>
+                            <span class="font-bold" vid="114">1200/=</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-end mt-auto pt-4 border-t border-brand-pink-dark border-dashed" vid="115">
+                        <button onclick="openModal('Specialty Shapes')" class="bg-brand-green text-white px-6 py-2 rounded-full font-semibold hover:bg-brand-pink-text transition-colors shadow-md text-sm flex items-center gap-2" vid="116">
+                            View Examples <i class="ph-bold ph-arrow-right" vid="117"></i>
+                        </button>
+                    </div>
+                </div>
+
+                
+                <div class="bg-brand-pink rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all border border-brand-pink-dark group flex flex-col h-full lg:col-span-2 xl:col-span-1" vid="118">
+                    <div class="w-full aspect-[2/1] xl:aspect-square bg-white rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-[1.02] transition-transform" vid="119">
+                        <div class="absolute inset-0 bg-brand-yellow/20" vid="120"></div>
+                        <div class="flex gap-4 items-end" vid="121">
+                            <i class="ph-duotone ph-tray text-7xl text-brand-yellow" vid="122"></i>
+                            <i class="ph-duotone ph-hexagon text-4xl text-brand-pink-text pb-2" vid="123"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-groovy text-2xl text-brand-green mb-2" vid="124">Trays &amp; Sets</h3>
+                    <ul class="text-sm text-brand-green-dark space-y-3 mb-6 flex-grow" vid="125">
+                        <li class="flex flex-col" vid="126">
+                            <div class="flex justify-between items-center w-full" vid="127">
+                                <span class="font-semibold text-base" vid="128">Multipurpose tray</span>
+                                <span class="font-bold text-brand-pink-text" vid="129">1200/=</span>
+                            </div>
+                        </li>
+                        <li class="flex flex-col" vid="130">
+                            <div class="flex justify-between items-center w-full" vid="131">
+                                <span class="font-semibold text-base" vid="132">Two matching trays</span>
+                                <span class="font-bold text-brand-pink-text" vid="133">1400/=</span>
+                            </div>
+                        </li>
+                        <li class="flex flex-col bg-white p-2 rounded-lg border border-brand-pink-dark" vid="134">
+                            <div class="flex justify-between items-center w-full" vid="135">
+                                <span class="font-bold text-brand-green" vid="136">Ashtray + Tray set</span>
+                                <span class="font-bold text-brand-pink-text text-lg" vid="137">1800/=</span>
+                            </div>
+                            <span class="text-xs text-brand-green-light mt-1" vid="138">Perfect bundle</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-end mt-auto pt-4 border-t border-brand-pink-dark border-dashed" vid="139">
+                        <button onclick="openModal('Trays &amp; Sets')" class="w-full bg-brand-green text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-pink-text transition-colors shadow-md flex justify-center items-center gap-2" vid="140">
+                            <i class="ph-bold ph-images" vid="141"></i> See Designs
+                        </button>
+                    </div>
+                </div>
+
+                
+                <div class="bg-brand-pink rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all border border-brand-pink-dark group flex flex-col h-full xl:col-span-1" vid="142">
+                    <div class="w-full aspect-square bg-white rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-[1.02] transition-transform" vid="143">
+                        <div class="absolute inset-0 bg-brand-pink-text/10" vid="144"></div>
+                        <div class="grid grid-cols-2 gap-4" vid="145">
+                            <i class="ph-duotone ph-package text-5xl text-brand-green" vid="146"></i>
+                            <i class="ph-duotone ph-device-mobile text-5xl text-brand-green/40" vid="147"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-groovy text-2xl text-brand-green mb-2" vid="148">Accessories</h3>
+                    <ul class="text-sm text-brand-green-dark space-y-4 mb-6 flex-grow" vid="149">
+                        <li class="flex justify-between items-center pb-2 border-b border-white" vid="150">
+                            <span class="font-semibold flex items-center gap-2" vid="151"><i class="ph-fill ph-package text-brand-pink-text" vid="152"></i> Storage box</span>
+                            <span class="font-bold text-brand-pink-text text-lg" vid="153">750/=</span>
+                        </li>
+                        
+                        <li class="pt-2" vid="154">
+                            <span class="text-xs text-brand-green uppercase font-bold tracking-wider mb-2 block" vid="155">Coming Soon</span>
+                            <div class="space-y-2" vid="156">
+                                <div class="flex justify-between items-center text-gray-400" vid="157">
+                                    <span class="flex items-center gap-2" vid="158"><i class="ph-light ph-device-mobile" vid="159"></i> Phone stand</span>
+                                    <span class="text-xs font-bold bg-white px-2 py-1 rounded" vid="160">SOON</span>
+                                </div>
+                                <div class="flex justify-between items-center text-gray-400" vid="161">
+                                    <span class="flex items-center gap-2" vid="162"><i class="ph-light ph-cigarette" vid="163"></i> Roach holder</span>
+                                    <span class="text-xs font-bold bg-white px-2 py-1 rounded" vid="164">SOON</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="flex justify-end mt-auto pt-4 border-t border-brand-pink-dark border-dashed" vid="165">
+                        <button onclick="openModal('Accessories')" class="w-12 h-12 bg-white text-brand-green rounded-full flex items-center justify-center border-2 border-brand-green hover:bg-brand-green hover:text-white transition-colors" vid="166">
+                            <i class="ph-bold ph-images text-xl" vid="167"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="how-to-order" class="py-24 bg-pattern relative border-y-4 border-white" vid="168">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" vid="169">
+            <div class="text-center mb-16 relative" vid="170">
+                <h2 class="font-groovy text-4xl md:text-5xl text-brand-green mb-4 z-10 relative" vid="171">How To Make A Custom Order</h2>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-20 bg-white/60 blur-xl rounded-full -z-0" vid="172"></div>
+            </div>
+
+            <div class="relative" vid="173">
+                
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-brand-pink-dark -translate-y-1/2 z-0 border-t-2 border-dashed border-brand-pink-text/50" vid="174"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative z-10" vid="175">
+                    
+                    
+                    <div class="bg-white rounded-3xl p-6 shadow-lg border-2 border-brand-pink flex flex-col items-center text-center relative group hover:-translate-y-2 transition-transform" vid="176">
+                        <div class="w-12 h-12 bg-brand-pink-text text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-md absolute -top-6" vid="177">1</div>
+                        <div class="w-16 h-16 bg-brand-pink rounded-full flex items-center justify-center text-brand-green text-3xl mb-4 mt-4" vid="178">
+                            <i class="ph-duotone ph-palette" vid="179"></i>
+                        </div>
+                        <h4 class="font-groovy text-xl text-brand-pink-text mb-2" vid="180">Choose Design</h4>
+                        <p class="text-sm text-brand-green-dark" vid="181">Pick shape &amp; colors. Send me the image. Glitter or No Glitter?</p>
+                    </div>
+
+                    
+                    <div class="bg-white rounded-3xl p-6 shadow-lg border-2 border-brand-pink flex flex-col items-center text-center relative group hover:-translate-y-2 transition-transform" vid="182">
+                        <div class="w-12 h-12 bg-brand-pink-text text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-md absolute -top-6" vid="183">2</div>
+                        <div class="w-16 h-16 bg-brand-pink rounded-full flex items-center justify-center text-brand-green text-3xl mb-4 mt-4 relative" vid="184">
+                            <i class="ph-duotone ph-user" vid="185"></i>
+                            <i class="ph-fill ph-moped absolute -bottom-2 -right-2 text-xl text-brand-pink-text bg-white rounded-full p-1" vid="186"></i>
+                        </div>
+                        <h4 class="font-groovy text-xl text-brand-pink-text mb-2" vid="187">Send Details</h4>
+                        <p class="text-sm text-brand-green-dark" vid="188">Phone number &amp; delivery method (Immediate or Pickup Mtaani).</p>
+                    </div>
+
+                    
+                    <div class="bg-white rounded-3xl p-6 shadow-lg border-2 border-brand-pink flex flex-col items-center text-center relative group hover:-translate-y-2 transition-transform" vid="189">
+                        <div class="w-12 h-12 bg-brand-pink-text text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-md absolute -top-6" vid="190">3</div>
+                        <div class="w-16 h-16 bg-brand-pink rounded-full flex items-center justify-center text-brand-green text-3xl mb-4 mt-4" vid="191">
+                            <i class="ph-duotone ph-money" vid="192"></i>
+                        </div>
+                        <h4 class="font-groovy text-xl text-brand-pink-text mb-2" vid="193">Make Deposit</h4>
+                        <p class="text-sm text-brand-green-dark" vid="194">Pay 50% to confirm order and start the process. (Or pay in full).</p>
+                    </div>
+
+                    
+                    <div class="bg-white rounded-3xl p-6 shadow-lg border-2 border-brand-pink flex flex-col items-center text-center relative group hover:-translate-y-2 transition-transform" vid="195">
+                        <div class="w-12 h-12 bg-brand-pink-text text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-md absolute -top-6" vid="196">4</div>
+                        <div class="w-16 h-16 bg-brand-pink rounded-full flex items-center justify-center text-brand-green text-3xl mb-4 mt-4" vid="197">
+                            <i class="ph-duotone ph-eye" vid="198"></i>
+                        </div>
+                        <h4 class="font-groovy text-xl text-brand-pink-text mb-2" vid="199">Review Look</h4>
+                        <p class="text-sm text-brand-green-dark" vid="200">I'll send a photo before final top coat/polish to ensure you love it.</p>
+                    </div>
+
+                    
+                    <div class="bg-white rounded-3xl p-6 shadow-lg border-2 border-brand-pink flex flex-col items-center text-center relative group hover:-translate-y-2 transition-transform" vid="201">
+                        <div class="w-12 h-12 bg-brand-pink-text text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 shadow-md absolute -top-6" vid="202">5</div>
+                        <div class="w-16 h-16 bg-brand-pink rounded-full flex items-center justify-center text-brand-green text-3xl mb-4 mt-4 relative" vid="203">
+                            <i class="ph-duotone ph-check-circle" vid="204"></i>
+                            <div class="absolute -top-3 -right-6 rotate-12 bg-green-100 text-green-700 text-[10px] font-bold px-2 py-0.5 border border-green-700 rounded-sm" vid="205">PAYMENT<br vid="206">RECEIVED</div>
+                        </div>
+                        <h4 class="font-groovy text-xl text-brand-pink-text mb-2" vid="207">Final Polish</h4>
+                        <p class="text-sm text-brand-green-dark" vid="208">Photo of completed item sent. Pay balance so I can get it to you!</p>
+                    </div>
+
+                </div>
+            </div>
+
+            
+            <div class="mt-16 bg-white/80 backdrop-blur-sm rounded-3xl p-8 max-w-3xl mx-auto shadow-sm border border-brand-pink-dark" vid="209">
+                <ul class="space-y-4 text-brand-green-dark" vid="210">
+                    <li class="flex gap-3" vid="211">
+                        <i class="ph-fill ph-clock text-brand-pink-text text-xl shrink-0 mt-1" vid="212"></i>
+                        <p vid="213"><strong class="text-brand-pink-text font-groovy text-xl tracking-wide" vid="214">Timeline:</strong> The process ideally takes <strong class="text-brand-green" vid="215">3 days</strong>. If there are any delays, I will let you know immediately.</p>
+                    </li>
+                    <li class="flex gap-3" vid="216">
+                        <i class="ph-fill ph-question text-brand-pink-text text-xl shrink-0 mt-1" vid="217"></i>
+                        <p vid="218"><strong class="text-brand-pink-text font-groovy text-xl tracking-wide" vid="219">Need Help?</strong> If you are unsure about any part, just ask. I'm happy to help you create the perfect design!</p>
+                    </li>
+                    <li class="flex gap-3" vid="220">
+                        <i class="ph-fill ph-shopping-bag text-brand-pink-text text-xl shrink-0 mt-1" vid="221"></i>
+                        <p vid="222"><strong class="text-brand-pink-text font-groovy text-xl tracking-wide" vid="223">Pre-made:</strong> You can still get any available designs posted. Happy shopping!</p>
+                    </li>
+                </ul>
+                
+                <div class="mt-8 text-center" id="custom" vid="224">
+                    <a href="https://wa.me/254113762991?text=Hi%20Sugar%20n%27%20Spice%20Creations%20By%20Tilda!%20I%20want%20to%20place%20an%20order."
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-3 bg-brand-green text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-brand-green-dark transition-all shadow-[0_10px_20px_rgba(92,128,97,0.3)] hover:-translate-y-1 hover:shadow-[0_15px_25px_rgba(92,128,97,0.4)] relative overflow-hidden group" vid="225">
+                        <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" vid="226"></div>
+                        <i class="ph-bold ph-paper-plane-tilt relative z-10" vid="227"></i> 
+                        <span class="relative z-10 font-groovy tracking-wider" vid="228">SEND US A DM</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="care-tips" class="py-24 bg-white" vid="229">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" vid="230">
+            <div class="text-center mb-16 relative" vid="231">
+                <h2 class="font-groovy text-5xl text-brand-green mb-2" vid="232">Few Care Tips</h2>
+                <p class="text-brand-pink-text font-medium" vid="233">To keep your piece looking perfect forever</p>
+                <i class="ph-fill ph-heart text-brand-pink-text text-4xl absolute -top-8 right-1/4 opacity-50 rotate-12" vid="234"></i>
+                <i class="ph-fill ph-sparkle text-brand-yellow text-3xl absolute bottom-0 left-1/4 opacity-70" vid="235"></i>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" vid="236">
+                
+                <div class="bg-[#F8FBF8] rounded-3xl p-8 border border-brand-green-light/30 shadow-sm relative overflow-hidden group" vid="237">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-brand-pink rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700" vid="238"></div>
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 relative z-10 border border-brand-pink" vid="239">
+                        <i class="ph-duotone ph-sun text-4xl text-brand-pink-text relative" vid="240"></i>
+                        <div class="absolute inset-0 flex items-center justify-center" vid="241"><div class="w-full h-1 bg-red-400 rotate-45" vid="242"></div></div>
+                    </div>
+                    <h3 class="font-groovy text-2xl text-brand-pink-text mb-4 relative z-10" vid="243">Keep away from direct sunlight</h3>
+                    <p class="text-brand-green-dark relative z-10" vid="244">Resin is <strong class="text-brand-green" vid="245">UV-sensitive</strong>, and long exposure to sunlight can cause yellowing over time.</p>
+                </div>
+
+                
+                <div class="bg-[#FFF5F7] rounded-3xl p-8 border border-brand-pink-dark/50 shadow-sm relative overflow-hidden group md:-translate-y-8" vid="246">
+                    <div class="absolute -left-10 -bottom-10 w-32 h-32 bg-brand-yellow/20 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700" vid="247"></div>
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 relative z-10 border border-brand-green-light" vid="248">
+                        <i class="ph-duotone ph-cigarette text-4xl text-brand-green" vid="249"></i>
+                    </div>
+                    <h3 class="font-groovy text-2xl text-brand-pink-text mb-4 relative z-10" vid="250">Protect the surface</h3>
+                    <p class="text-brand-green-dark relative z-10 mb-4" vid="251">If using as an ashtray, <strong class="text-brand-pink-text" vid="252">avoid putting out butts directly on the resin</strong> to prevent speed-up of yellowing.</p>
+                    <div class="bg-white/80 p-3 rounded-xl border border-brand-pink-dark text-sm text-brand-green-dark" vid="253">
+                        <strong class="text-brand-green font-bold" vid="254">Pro tip:</strong> Place a small coin or metallic object in the tapping area to keep it looking new longer.
+                    </div>
+                </div>
+
+                
+                <div class="bg-[#F8FBF8] rounded-3xl p-8 border border-brand-green-light/30 shadow-sm relative overflow-hidden group" vid="255">
+                    <div class="absolute right-0 bottom-0 w-40 h-40 bg-brand-pink/40 rounded-tl-full group-hover:scale-110 transition-transform duration-700" vid="256"></div>
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 relative z-10 border border-brand-pink" vid="257">
+                        <i class="ph-duotone ph-drop text-4xl text-blue-300" vid="258"></i>
+                    </div>
+                    <h3 class="font-groovy text-2xl text-brand-pink-text mb-4 relative z-10" vid="259">Clean gently</h3>
+                    <p class="text-brand-green-dark relative z-10" vid="260">Use a soft cloth or sponge with mild handwashing soap or window cleaner. <strong class="text-brand-green" vid="261">Avoid abrasive cleaners</strong> or rough scrubbing pads.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" vid="262">
+                <p class="font-groovy text-3xl text-brand-green drop-shadow-sm flex items-center justify-center gap-3" vid="263">
+                    Hope you enjoy your piece! <i class="ph-fill ph-heart text-brand-pink-text animate-pulse" vid="264"></i>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="faq" class="py-24 bg-brand-pink relative overflow-hidden border-t border-brand-pink-dark/50" vid="265">
+        
+        <div class="absolute left-0 top-20 w-64 h-64 bg-white/40 rounded-full blur-3xl" vid="266"></div>
+        <div class="absolute right-0 bottom-20 w-96 h-96 bg-brand-green-light/10 rounded-full blur-3xl" vid="267"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" vid="268">
+            <div class="text-center mb-16" vid="269">
+                <h2 class="font-groovy text-6xl text-brand-green drop-shadow-md mb-2 tracking-wide" style="-webkit-text-stroke: 1px #FEF0F3;" vid="270">FAQS</h2>
+                <div class="w-16 h-1.5 bg-brand-pink-text mx-auto rounded-full" vid="271"></div>
+            </div>
+
+            <div class="space-y-4" vid="272">
+                
+                
+                <details class="bg-white rounded-2xl shadow-sm border border-brand-pink-dark overflow-hidden group" open="" vid="273">
+                    <summary class="px-6 py-5 cursor-pointer flex justify-between items-center bg-white hover:bg-[#FEF8F9] transition-colors font-medium text-lg text-brand-pink-text select-none" vid="274">
+                        <span class="pr-8" vid="275">What is epoxy resin?</span>
+                        <div class="w-8 h-8 rounded-full bg-brand-pink flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300" vid="276">
+                            <i class="ph-bold ph-caret-down text-brand-green" vid="277"></i>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-brand-green-dark leading-relaxed border-t border-brand-pink-dark/20 bg-white" vid="278">
+                        <strong class="text-brand-green" vid="279">Resin is a material that starts as a liquid</strong> and hardens into a very durable, shiny, and smooth solid and becomes similar to a strong plastic or glass. It allows us to preserve specific colors, glitters, and images inside your ashtray/piece forever.
+                    </div>
+                </details>
+
+                
+                <details class="bg-white rounded-2xl shadow-sm border border-brand-pink-dark overflow-hidden group" vid="280">
+                    <summary class="px-6 py-5 cursor-pointer flex justify-between items-center bg-white hover:bg-[#FEF8F9] transition-colors font-medium text-lg text-brand-pink-text select-none" vid="281">
+                        <span class="pr-8" vid="282">Is it toxic?</span>
+                        <div class="w-8 h-8 rounded-full bg-brand-pink flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300" vid="283">
+                            <i class="ph-bold ph-caret-down text-brand-green" vid="284"></i>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-brand-green-dark leading-relaxed border-t border-brand-pink-dark/20 bg-white" vid="285">
+                        No. Once the resin has fully hardened (cured), it becomes <strong class="text-brand-pink-text" vid="286">chemically inert</strong>. This means it is non-toxic and completely safe to have in your home.
+                    </div>
+                </details>
+
+                
+                <details class="bg-white rounded-2xl shadow-sm border border-brand-pink-dark overflow-hidden group" vid="287">
+                    <summary class="px-6 py-5 cursor-pointer flex justify-between items-center bg-white hover:bg-[#FEF8F9] transition-colors font-medium text-lg text-brand-pink-text select-none" vid="288">
+                        <span class="pr-8" vid="289">Is it safe to use?</span>
+                        <div class="w-8 h-8 rounded-full bg-brand-pink flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300" vid="290">
+                            <i class="ph-bold ph-caret-down text-brand-green" vid="291"></i>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-brand-green-dark leading-relaxed border-t border-brand-pink-dark/20 bg-white" vid="292">
+                        Yes, it is safe to handle and use daily! (Note: While it is safe to touch, standard resin is generally <strong class="text-brand-pink-text" vid="293">not recommended for eating food directly off of</strong>.)
+                    </div>
+                </details>
+
+                
+                <details class="bg-white rounded-2xl shadow-sm border border-brand-pink-dark overflow-hidden group" vid="294">
+                    <summary class="px-6 py-5 cursor-pointer flex justify-between items-center bg-white hover:bg-[#FEF8F9] transition-colors font-medium text-lg text-brand-pink-text select-none" vid="295">
+                        <span class="pr-8" vid="296">Can it break?</span>
+                        <div class="w-8 h-8 rounded-full bg-brand-pink flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300" vid="297">
+                            <i class="ph-bold ph-caret-down text-brand-green" vid="298"></i>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-brand-green-dark leading-relaxed border-t border-brand-pink-dark/20 bg-white" vid="299">
+                        Cured resin is <strong class="text-brand-green" vid="300">much stronger and more durable than glass or ceramic</strong>, making it shatter-resistant. It won't break if you accidentally knock it over on a table. However, it is not indestructible; if dropped from a high place onto a hard floor or handled very roughly, it could chip or crack.
+                    </div>
+                </details>
+
+                
+                <details class="bg-white rounded-2xl shadow-sm border border-brand-pink-dark overflow-hidden group" vid="301">
+                    <summary class="px-6 py-5 cursor-pointer flex justify-between items-center bg-white hover:bg-[#FEF8F9] transition-colors font-medium text-lg text-brand-pink-text select-none" vid="302">
+                        <span class="pr-8" vid="303">Will my ashtray melt or burn?</span>
+                        <div class="w-8 h-8 rounded-full bg-brand-pink flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300" vid="304">
+                            <i class="ph-bold ph-caret-down text-brand-green" vid="305"></i>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-brand-green-dark leading-relaxed border-t border-brand-pink-dark/20 bg-white" vid="306">
+                        These ashtrays are <strong class="text-brand-pink-text" vid="307">heat-resistant</strong>, meaning they can handle hot ash safely. However, they are <strong class="text-brand-pink-text" vid="308">not fireproof</strong>. To keep them looking new, please do not leave a burning smokables resting on the resin for a long time or stub it out too forcefully, as extreme heat can eventually leave a mark.
+                    </div>
+                </details>
+
+                
+                <details class="bg-white rounded-2xl shadow-sm border border-brand-pink-dark overflow-hidden group" vid="309">
+                    <summary class="px-6 py-5 cursor-pointer flex justify-between items-center bg-white hover:bg-[#FEF8F9] transition-colors font-medium text-lg text-brand-pink-text select-none" vid="310">
+                        <span class="pr-8" vid="311">How do I care for it?</span>
+                        <div class="w-8 h-8 rounded-full bg-brand-pink flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300" vid="312">
+                            <i class="ph-bold ph-caret-down text-brand-green" vid="313"></i>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-brand-green-dark leading-relaxed border-t border-brand-pink-dark/20 bg-white" vid="314">
+                        Cleaning is easy! Wash gently with cool water and mild soap (such as dish soap), then dry with a soft cloth. A full care guide will be included with your package.
+                    </div>
+                </details>
+
+                
+                <details class="bg-white rounded-2xl shadow-sm border border-brand-pink-dark overflow-hidden group" vid="315">
+                    <summary class="px-6 py-5 cursor-pointer flex justify-between items-center bg-white hover:bg-[#FEF8F9] transition-colors font-medium text-lg text-brand-pink-text select-none" vid="316">
+                        <span class="pr-8" vid="317">Can I customize everything?</span>
+                        <div class="w-8 h-8 rounded-full bg-brand-pink flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300" vid="318">
+                            <i class="ph-bold ph-caret-down text-brand-green" vid="319"></i>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-brand-green-dark leading-relaxed border-t border-brand-pink-dark/20 bg-white" vid="320">
+                        <strong class="text-brand-green" vid="321">Absolutely! You have full control over the design.</strong> You pick the shape, the colors, whether you want glitter (and what color), and you can send me any image you want embedded inside.
+                    </div>
+                </details>
+
+                
+                <details class="bg-white rounded-2xl shadow-sm border border-brand-pink-dark overflow-hidden group" vid="322">
+                    <summary class="px-6 py-5 cursor-pointer flex justify-between items-center bg-white hover:bg-[#FEF8F9] transition-colors font-medium text-lg text-brand-pink-text select-none" vid="323">
+                        <span class="pr-8" vid="324">How long will my order take?</span>
+                        <div class="w-8 h-8 rounded-full bg-brand-pink flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300" vid="325">
+                            <i class="ph-bold ph-caret-down text-brand-green" vid="326"></i>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 text-brand-green-dark leading-relaxed border-t border-brand-pink-dark/20 bg-white" vid="327">
+                        Ideally, the process takes <strong class="text-brand-pink-text" vid="328">3 days</strong> to pour, dry, and polish your item. If there are any delays, I will let you know immediately.
+                    </div>
+                </details>
+
+            </div>
+            
+            <div class="mt-10 text-center text-brand-green-dark" vid="329">
+                Feel free to send us a DM if you have any further questions!
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-white pt-16 pb-8 border-t border-brand-pink-dark relative" vid="330">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" vid="331">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12 border-b border-brand-pink-dark pb-12" vid="332">
+                
+                <div class="flex flex-col items-center md:items-start text-center md:text-left" vid="333">
+                    <div class="flex items-center gap-2 mb-4" vid="334">
+                        <div class="relative w-16 h-16 flex items-center justify-center bg-brand-pink rounded-full border border-brand-pink-dark" vid="335">
+                            <i class="ph-fill ph-heart text-brand-pink-text text-5xl absolute" vid="336"></i>
+                            <i class="ph-fill ph-fire text-brand-green text-3xl absolute mt-1 ml-1" vid="337"></i>
+                        </div>
+                        <div class="flex flex-col leading-none" vid="338">
+                            <span class="font-groovy text-brand-pink-text text-3xl tracking-wide" vid="339">Sugar n' Spice</span>
+                            <span class="font-body text-brand-green text-sm font-bold tracking-widest uppercase" vid="340">Creations By Tilda</span>
+                        </div>
+                    </div>
+                    <p class="text-brand-green-dark max-w-sm mt-2 font-medium" vid="341">Custom epoxy resin ashtrays, rolling trays, and accessories designed your way.</p>
+                </div>
+
+                <div class="flex flex-col items-center md:items-end gap-6" vid="342">
+                    <h4 class="font-groovy text-xl text-brand-green" vid="343">Let's Create Together</h4>
+                    <a href="#" class="bg-brand-green text-white px-8 py-3 rounded-full font-bold hover:bg-brand-pink-text transition-colors shadow-md flex items-center gap-2 text-lg" vid="344">
+                        <i class="ph-fill ph-instagram-logo text-xl" vid="345"></i> @sugarnspice_tilda
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-brand-green-light font-medium" vid="346">
+                <p vid="347">© 2025 Sugar n' Spice Creations By Tilda. All rights reserved.</p>
+                <div class="flex gap-4" vid="348">
+                    <a href="#" class="hover:text-brand-pink-text transition-colors" vid="349">Instagram</a>
+                    <a href="#" class="hover:text-brand-pink-text transition-colors" vid="350">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div id="portfolio-modal" class="fixed inset-0 z-[100] bg-brand-green-dark/80 backdrop-blur-sm hidden flex items-center justify-center p-4" vid="351">
+        
+        <div class="absolute inset-0 cursor-pointer" onclick="closeModal()" vid="352"></div>
+        
+        
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col relative z-10 overflow-hidden modal-enter" id="modal-content-wrapper" vid="353">
+            
+            
+            <div class="px-8 py-6 border-b border-brand-pink flex justify-between items-center bg-brand-pink/30" vid="354">
+                <h3 id="modal-title" class="font-groovy text-3xl text-brand-green flex items-center gap-3" vid="355">
+                    <i class="ph-fill ph-sparkle text-brand-yellow" vid="356"></i>
+                    <span id="modal-title-text" vid="357">Category Designs</span>
+                </h3>
+                <button onclick="closeModal()" class="w-10 h-10 bg-white text-brand-pink-text rounded-full flex items-center justify-center hover:bg-brand-pink-text hover:text-white transition-colors shadow-sm border border-brand-pink-dark" vid="358">
+                    <i class="ph-bold ph-x text-xl" vid="359"></i>
+                </button>
+            </div>
+
+            
+            <div class="p-8 overflow-y-auto bg-pattern flex-grow" style="background-size: 30px 30px;" vid="360">
+                <p class="text-center text-brand-green-dark mb-8 font-medium" vid="361">Here are some examples of past creations to inspire your custom order!</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="modal-grid" vid="362">
+                    
+                    
+                    
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-brand-pink group cursor-pointer" vid="363">
+                        <div class="aspect-square bg-gradient-to-br from-pink-200 to-purple-200 relative flex items-center justify-center overflow-hidden" vid="364">
+                            
+                            <div class="w-3/4 h-3/4 rounded-full bg-white/40 shadow-inner backdrop-blur-sm border-2 border-white/50 flex items-center justify-center relative" vid="365">
+                                <div class="absolute inset-0 opacity-30 bg-[radial-gradient(circle,_#ffffff_2px,_transparent_2px)]" style="background-size: 15px 15px;" vid="366"></div>
+                                <i class="ph-fill ph-flower-lotus text-4xl text-pink-400 drop-shadow-md" vid="367"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center" vid="368">
+                                <span class="bg-white text-brand-pink-text font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0" vid="369">I want this vibe</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white" vid="370">
+                            <h4 class="font-bold text-brand-green" vid="371">Pink Floral Dream</h4>
+                            <p class="text-xs text-brand-pink-text mt-1" vid="372">Pink tint + Real dried flowers + Gold flake</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-brand-pink group cursor-pointer" vid="373">
+                        <div class="aspect-square bg-gradient-to-tr from-green-200 to-emerald-300 relative flex items-center justify-center overflow-hidden" vid="374">
+                            
+                            <div class="w-3/4 h-3/4 bg-white/40 shadow-inner backdrop-blur-sm border-2 border-white/50 rotate-45 rounded-xl flex items-center justify-center" vid="375">
+                                <i class="ph-fill ph-leaf text-5xl text-green-700/60 drop-shadow-md -rotate-45" vid="376"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center" vid="377">
+                                <span class="bg-white text-brand-green font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0" vid="378">I want this vibe</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white" vid="379">
+                            <h4 class="font-bold text-brand-green" vid="380">Matcha Swirl</h4>
+                            <p class="text-xs text-brand-green-light mt-1" vid="381">Sage green &amp; white swirl + Clear top</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-brand-pink group cursor-pointer" vid="382">
+                        <div class="aspect-square bg-gradient-to-b from-gray-800 to-black relative flex items-center justify-center overflow-hidden" vid="383">
+                            
+                            <div class="w-3/4 h-3/4 bg-white/10 shadow-inner backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center relative" vid="384">
+                                <div class="absolute inset-0 opacity-60 bg-[radial-gradient(circle,_#ffd700_1px,_transparent_1px)]" style="background-size: 8px 8px;" vid="385"></div>
+                                <i class="ph-fill ph-star text-4xl text-yellow-400 drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]" vid="386"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors flex items-center justify-center" vid="387">
+                                <span class="bg-black text-white font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0" vid="388">I want this vibe</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white" vid="389">
+                            <h4 class="font-bold text-brand-green" vid="390">Midnight Sparkle</h4>
+                            <p class="text-xs text-gray-500 mt-1" vid="391">Black base + Holographic chunky glitter</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-brand-pink group cursor-pointer" vid="392">
+                        <div class="aspect-square bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 relative flex items-center justify-center overflow-hidden" vid="393">
+                            <div class="w-[80%] h-[60%] bg-white/50 shadow-inner backdrop-blur-md border-2 border-white/70 rounded-2xl flex items-center justify-center relative" vid="394">
+                                <i class="ph-fill ph-cloud text-5xl text-white drop-shadow-md" vid="395"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center" vid="396">
+                                <span class="bg-white text-brand-pink-text font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0" vid="397">I want this vibe</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white" vid="398">
+                            <h4 class="font-bold text-brand-green" vid="399">Cotton Candy Sky</h4>
+                            <p class="text-xs text-brand-pink-text mt-1" vid="400">Pastel gradient + white cloud puffs</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-brand-pink group cursor-pointer" vid="401">
+                        <div class="aspect-square bg-gradient-to-br from-red-600 to-red-900 relative flex items-center justify-center overflow-hidden" vid="402">
+                            <div class="w-[70%] h-[80%] bg-white/10 shadow-inner backdrop-blur-sm border-2 border-red-400/50 rounded-b-[40px] rounded-t-xl flex items-center justify-center" vid="403">
+                                <i class="ph-fill ph-fire text-6xl text-orange-400 drop-shadow-[0_0_15px_rgba(255,165,0,0.8)]" vid="404"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors flex items-center justify-center" vid="405">
+                                <span class="bg-white text-red-600 font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0" vid="406">I want this vibe</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white" vid="407">
+                            <h4 class="font-bold text-brand-green" vid="408">Inferno</h4>
+                            <p class="text-xs text-red-600 mt-1" vid="409">Clear red + embedded foil flakes</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-brand-pink group cursor-pointer" vid="410">
+                        <div class="aspect-square bg-[#E8E1D9] relative flex items-center justify-center overflow-hidden" vid="411">
+                            <div class="w-3/4 h-3/4 bg-white/80 shadow-[inset_0_0_20px_rgba(0,0,0,0.1)] border border-white rounded-full flex items-center justify-center relative overflow-hidden" vid="412">
+                                
+                                <div class="absolute w-4 h-4 bg-orange-300 rounded-sm top-4 left-6 rotate-12" vid="413"></div>
+                                <div class="absolute w-6 h-3 bg-brand-green-light rounded-sm bottom-8 right-6 -rotate-12" vid="414"></div>
+                                <div class="absolute w-5 h-5 bg-brand-pink-text rounded-full top-10 right-8" vid="415"></div>
+                                <div class="absolute w-3 h-8 bg-blue-200 rounded-sm bottom-10 left-8 rotate-45" vid="416"></div>
+                                <div class="absolute w-2 h-2 bg-gray-600 rounded-full top-1/2 left-1/2" vid="417"></div>
+                                <span class="font-bold text-brand-green-dark opacity-50 text-xl tracking-widest relative z-10" vid="418">TERRAZZO</span>
+                            </div>
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center" vid="419">
+                                <span class="bg-brand-green text-white font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0" vid="420">I want this vibe</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white" vid="421">
+                            <h4 class="font-bold text-brand-green" vid="422">Faux Terrazzo</h4>
+                            <p class="text-xs text-[#b8ab9a] mt-1" vid="423">Cream base + custom colored chips</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            
+            <div class="px-8 py-5 border-t border-brand-pink bg-white flex flex-col sm:flex-row justify-between items-center gap-4" vid="424">
+                <p class="text-sm text-brand-green-light font-medium" vid="425">Found your inspiration? Take a screenshot and send it to me!</p>
+                <a href="#how-to-order" onclick="closeModal()" class="bg-brand-green text-white px-6 py-2.5 rounded-full font-bold hover:bg-brand-pink-text transition-colors shadow-sm text-sm whitespace-nowrap" vid="426">
+                    Start Custom Order
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="snsscript.js"></script>
+
+</body></html>
